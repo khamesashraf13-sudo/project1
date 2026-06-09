@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>WE Vision - Final Project Documentation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4 {
+            color: #1a365d;
+            font-weight: 700;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ed8936;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            page-break-after: avoid;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        /* Cover Page styling */
+        .cover-page {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: 4px double #1a365d;
+            padding: 40px;
+            box-sizing: border-box;
+            page-break-after: always;
+        }
+
+        .cover-title {
+            font-size: 42px;
+            color: #1a365d;
+            margin-bottom: 10px;
+        }
+
+        .cover-subtitle {
+            font-size: 24px;
+            color: #ed8936;
+            margin-bottom: 40px;
+        }
+
+        .cover-details {
+            margin-top: 60px;
+            font-size: 18px;
+            color: #4a5568;
+        }
+
+        /* Diagram Box */
+        .diagram-box {
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-right: 5px solid #1a365d;
+            padding: 15px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            direction: ltr;
+            text-align: left;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #cbd5e0;
+            padding: 12px;
+            text-align: right;
+        }
+
+        th {
+            background-color: #1a365d;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+
+        /* Grid Lists */
+        .grid-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .grid-item {
+            background-color: #f7fafc;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .section-lang {
+            font-size: 14px;
+            color: #718096;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cover-page" style="direction: ltr; text-align: center;">
+        <div class="section-lang">English Version</div>
+        <div class="cover-title">WE Vision</div>
+        <div class="cover-subtitle">Smart Blind Cane with AI</div>
+        <div style="font-size: 18px; font-style: italic; color: #4a5568;">"Empowering Sight Through Innovation"</div>
+        
+        <div class="cover-details">
+            <p><strong>Category:</strong> Assistive Technology & Artificial Intelligence</p>
+            <p><strong>Team Structure:</strong> 5 Specialized Members</p>
+            <p><strong>Vision:</strong> To empower visually impaired people with a safer and more independent daily mobility experience.</p>
+        </div>
+    </div>
+
+    <div style="direction: ltr; text-align: left;">
+        <h2>1. Technical Diagrams & Architecture</h2>
+        
+        <h3>A. Block Diagram</h3>
+        <div class="diagram-box">
++-----------------------------------------------------------------------+
+|                             SMART CANE                                |
+|                                                                       |
+|  [ESP32-CAM] ----------(Bluetooth)---------> [Mobile App AI Engine]   |
+|       |                                               |               |
+|  [HC-SR04 Front] ---> [Microcontroller]               v               |
+|  [HC-SR04 Down]  --->    (ESP32)           [Audio Output Generation]  |
+|                                                       |               |
+|  [Vibration Motor] <----------------------------------+               |
++-----------------------------------------------------------------------+</div>
+
+        <h3>B. Team Structure & Roles (5 Members)</h3>
+        <ul>
+            <li><strong>Member 1 (Project Manager & Business Lead):</strong> Manages timelines, budget execution, and investor pitch relations.</li>
+            <li><strong>Member 2 (Embedded Systems Engineer):</strong> Handles ESP32-CAM firmware, wiring connection design, and sensor calibration.</li>
+            <li><strong>Member 3 (Mobile App Developer):</strong> Develops the high-contrast Flutter application interface and Bluetooth integrations.</li>
+            <li><strong>Member 4 (AI & Computer Vision Engineer):</strong> Trains the lightweight object recognition models for custom environment tracking.</li>
+            <li><strong>Member 5 (Mechanical & QA Designer):</strong> Designs the physical cane chassis framework and leads structural stress testing.</li>
+        </ul>
+
+        <h2>2. Financial Plan & Scalability Matrix</h2>
+        <h3>A. Cost Breakdown Table</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Component Description</th>
+                    <th>Qty</th>
+                    <th>Est. Unit Cost (USD)</th>
+                    <th>Total Cost (USD)</th>
+                    <th>Purpose in Project</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>ESP32-CAM Board</strong></td>
+                    <td>1</td>
+                    <td>$7.00</td>
+                    <td>$7.00</td>
+                    <td>Video capture & sensor management</td>
+                </tr>
+                <tr>
+                    <td><strong>HC-SR04 Ultrasonic Sensors</strong></td>
+                    <td>2</td>
+                    <td>$2.00</td>
+                    <td>$4.00</td>
+                    <td>Front & Downward spatial measurements</td>
+                </tr>
+                <tr>
+                    <td><strong>18650 Rechargeable Battery</strong></td>
+                    <td>1</td>
+                    <td>$4.50</td>
+                    <td>$4.50</td>
+                    <td>Sustained main power source</td>
+                </tr>
+                <tr>
+                    <td><strong>TP4056 Charging Module</strong></td>
+                    <td>1</td>
+                    <td>$1.50</td>
+                    <td>$1.50</td>
+                    <td>Safe battery recharge via Type-C</td>
+                </tr>
+                <tr>
+                    <td><strong>Vibration Motor + Buttons</strong></td>
+                    <td>1 set</td>
+                    <td>$2.00</td>
+                    <td>$2.00</td>
+                    <td>Physical feedback and inputs</td>
+                </tr>
+                <tr>
+                    <td><strong>Bluetooth Earphone</strong></td>
+                    <td>1</td>
+                    <td>$8.00</td>
+                    <td>$8.00</td>
+                    <td>Delivering audio instructions to user</td>
+                </tr>
+                <tr>
+                    <td><strong>Chassis & Mechanical Structure</strong></td>
+                    <td>1</td>
+                    <td>$10.00</td>
+                    <td>$10.00</td>
+                    <td>Ergonomic stick casing and mountings</td>
+                </tr>
+                <tr style="background-color: #e2e8f0; font-weight: bold;">
+                    <td colspan="3">Total Base Prototype Production Cost</td>
+                    <td>$37.00</td>
+                    <td>Optimized for student-friendly budget</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>B. Commercial Pricing & Revenue Model</h3>
+        <ul>
+            <li><strong>Mass Production Cost Adjustment:</strong> Wholesale procurement lowers the unit hardware cost from <strong>$37.00</strong> down to approximately <strong>$25.00</strong>.</li>
+            <li><strong>Target Retail Market Price:</strong> Suggested selling price of <strong>$60.00</strong> per unit, remaining highly affordable compared to international medical assistive tech ($200+).</li>
+            <li><strong>Profit Margin:</strong> Approximately <strong>58.3% ($35.00 profit per cane sold)</strong> allocated towards operational expansion and premium software features development.</li>
+            <li><strong>Operational Allocation:</strong> 15% dedicated to scaling mobile cloud cloud features, 20% for continuous research, and 65% for assembly and team infrastructure scalability.</li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="cover-page" style="direction: rtl; text-align: center;">
+        <div class="section-lang">النسخة العربية</div>
+        <div class="cover-title">WE Vision</div>
+        <div class="cover-subtitle">العصا الذكية للمكفوفين بالذكاء الاصطناعي</div>
+        <div style="font-size: 18px; font-style: italic; color: #4a5568;">"تمكين الرؤية عبر الابتكار"</div>
+        
+        <div class="cover-details">
+            <p><strong>الفئة:</strong> التكنولوجيا المساعدة والذكاء الاصطناعي</p>
+            <p><strong>هيكل الفريق:</strong> 5 أعضاء متخصصين</p>
+            <p><strong>الرؤية:</strong> تمكين الأشخاص ذوي الإعاقة البصرية من الحصول على تجربة حركة يومية أكثر أماناً واستقلالية.</p>
+        </div>
+    </div>
+
+    <div style="direction: rtl; text-align: right;">
+        <h2>1. المخططات الهندسية وتوزيع أدوار الفريق</h2>
+        
+        <h3>أ. مخطط الكتل البرمجية والعتادية (Block Diagram)</h3>
+        <div class="diagram-box">
++-----------------------------------------------------------------------+
+|                            العصا الذكية                               |
+|                                                                       |
+|  [ESP32-CAM] ----------(بلوتوث)---------> [معالجة الذكاء الاصطناعي]    |
+|       |                                        (تطبيق الهاتف)         |
+|  [مستشعر أمامي] ---> [المتحكم الدقيق]                  v               |
+|  [مستشعر سفلي]  --->    (ESP32)            [توليد التعليمات الصوتية]  |
+|                                                       |               |
+|  [موتور الاهتزاز] <------------------------------------+               |
++-----------------------------------------------------------------------+</div>
+
+        <h3>ب. الهيكل التنظيمي وأدوار الفريق (5 أعضاء)</h3>
+        <ul>
+            <li><strong>العضو الأول (مدير المشروع والجانب التجاري):</strong> مسؤول عن تنظيم المخطط الزمني، تخطيط وإدارة الميزانية المالية، وتقديم العرض التقديمي للمستثمرين ولجنة التحكيم.</li>
+            <li><strong>العضو الثاني (مهندس الأنظمة المدمجة - Embedded Systems):</strong> مسؤول عن كتابة كود البرمجيات الدقيقة (Firmware) لوحدة ESP32-CAM وتوصيل ومعايرة مستشعرات المسافة.</li>
+            <li><strong>العضو الثالث (مطوّر تطبيق الهاتف):</strong> مسؤول عن بناء واجهات التطبيق المتوافقة مع المكفوفين باستخدام Flutter وبرمجة ربط البلوتوث واستقبال البيانات.</li>
+            <li><strong>العضو الرابع (مهندس الذكاء الاصطناعي والرؤية الحاسوبية):</strong> مسؤول عن تدريب واختبار النماذج البرمجية الخفيفة للتعرف على الأشياء وتصنيفها بيئياً.</li>
+            <li><strong>العضو الخامس (المصمم الميكانيكي وجودة الهيكل):</strong> مسؤول عن التصميم الهندسي الخارجي للعصا واحتواء المكونات واختبار الصلابة وقوة التحمل الفيزيائية.</li>
+        </ul>
+
+        <h2>2. الدراسة المالية الاستراتيجية وجدوى المشروع</h2>
+        <h3>أ. جدول تفصيل ميزانية التكلفة الأساسية للنموذج الأولي</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>اسم المكون الهيكلي والإلكتروني</th>
+                    <th>الكمية</th>
+                    <th>التكلفة التقديرية للوحدة ($)</th>
+                    <th>إجمالي التكلفة ($)</th>
+                    <th>دور المكون في المشروع</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>لوحة ESP32-CAM</strong></td>
+                    <td>1</td>
+                    <td>$7.00</td>
+                    <td>$7.00</td>
+                    <td>التقاط صور البث وإدارة المستشعرات والأزرار</td>
+                </tr>
+                <tr>
+                    <td><strong>مستشعر HC-SR04 الأمامي والسفلي</strong></td>
+                    <td>2</td>
+                    <td>$2.00</td>
+                    <td>$4.00</td>
+                    <td>قياس المسافات لتجنب العقبات الأمامية والحفر</td>
+                </tr>
+                <tr>
+                    <td><strong>بطارية قابلة للشحن 18650</strong></td>
+                    <td>1</td>
+                    <td>$4.50</td>
+                    <td>$4.50</td>
+                    <td>مصدر الطاقة الرئيسي والمستمر لقطع العصا</td>
+                </tr>
+                <tr>
+                    <td><strong>دائرة شحن ومراقبة TP4056</strong></td>
+                    <td>1</td>
+                    <td>$1.50</td>
+                    <td>$1.50</td>
+                    <td>توفير شحن آمن وسريع عبر كابل Type-C</td>
+                </tr>
+                <tr>
+                    <td><strong>موتور اهتزاز + أزرار تحكم</strong></td>
+                    <td>1 مجموعة</td>
+                    <td>$2.00</td>
+                    <td>$2.00</td>
+                    <td>تقديم التنبيه الفيزيائي الملموس وزر الاستغاثة SOS</td>
+                </tr>
+                <tr>
+                    <td><strong>سماعة بلوتوث (Earphone)</strong></td>
+                    <td>1</td>
+                    <td>$8.00</td>
+                    <td>$8.00</td>
+                    <td>نقل التوجيهات الصوتية مباشرة لأذن المستخدم الكفيف</td>
+                </tr>
+                <tr>
+                    <td><strong>الهيكل الميكانيكي الخارجي للعصا</strong></td>
+                    <td>1</td>
+                    <td>$10.00</td>
+                    <td>$10.00</td>
+                    <td>تجمع المكونات الإلكترونية بشكل مريح وعملي للاستخدام</td>
+                </tr>
+                <tr style="background-color: #e2e8f0; font-weight: bold;">
+                    <td colspan="3">إجمالي تكلفة النموذج الأولي (Prototype)</td>
+                    <td>$37.00</td>
+                    <td>تكلفة مدروسة ومنافسة جداً للمشاريع الطلابية</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>ب. نموذج التسعير التجاري وتحليل الأرباح للإنتاج الكمي</h3>
+        <ul>
+            <li><strong>تخفيض التكلفة عند الإنتاج الواسع (Mass Production):</strong> عند الشراء بالجملة وتصنيع الدوائر المطبوعة، تنخفض تكلفة تصنيع الوحدة الواحدة من <strong>$37.00</strong> لتصل إلى <strong>$25.00</strong> فقط.</li>
+            <li><strong>سعر البيع المقترح في السوق المستهدف:</strong> سيتم طرح المنتج بسعر تجاري منافس جداً وهو <strong>$60.00</strong> (ما يعادل ربع تكلفة الأجهزة الطبية المساعدة العالمية المنافسة التي تتجاوز الـ $200).</li>
+            <li><strong>هامش الربح الإجمالي للوحدة:</strong> يصل إلى <strong>58.3% (أي صافي ربح $35.00 عن كل عصا مبيعة)</strong>، وهي نسبة ممتازة تضمن استدامة المشروع وتغطية النفقات التشغيلية.</li>
+            <li><strong>آلية توزيع الدخل التشغيلي:</strong> يتم تخصيص 15% لتطوير الخوادم السحابية للتطبيق، 20% للبحث والتطوير المستمر للمستشعرات، و65% لعمليات التجميع والتسويق وتوسيع هيكل الفريق وتغطية نفقات الإنتاج الجديدة.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
